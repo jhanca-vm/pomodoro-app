@@ -1,0 +1,87 @@
+@font-face {
+  font-family: 'Kumbh Sans';
+  font-weight: 700;
+  src: url('/assets/fonts/KumbhSans-Bold.ttf') format('truetype');
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #1e213f;
+  color: #d7e0ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 360px;
+  position: relative;
+  width: 100%;
+}
+
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  outline: none;
+}
+
+.font-sans {
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+.bg-red {
+  background-color: #f87070;
+}
+
+.bg-cyan {
+  background-color: #70f3f8;
+}
+
+.bg-purple {
+  background-color: #d881f8;
+}
+
+.stroke-red,
+.txt-red:focus-visible,
+.txt-red:hover {
+  color: #f87070;
+}
+
+.stroke-cyan,
+.txt-cyan:focus-visible,
+.txt-cyan:hover {
+  color: #70f3f8;
+}
+
+.stroke-purple,
+.txt-purple:focus-visible,
+.txt-purple:hover {
+  color: #d881f8;
+}
+
+.finish {
+  stroke-dashoffset: 0 !important;
+}
+
+@keyframes progress {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
