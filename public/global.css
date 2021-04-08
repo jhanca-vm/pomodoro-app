@@ -4,6 +4,30 @@
   src: url('/assets/fonts/KumbhSans-Bold.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Roboto Slab';
+  font-weight: 400;
+  src: url('/assets/fonts/RobotoSlab-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto Slab';
+  font-weight: 700;
+  src: url('/assets/fonts/RobotoSlab-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Space Mono';
+  font-weight: 400;
+  src: url('/assets/fonts/SpaceMono-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Space Mono';
+  font-weight: 700;
+  src: url('/assets/fonts/SpaceMono-Bold.ttf') format('truetype');
+}
+
 *,
 ::before,
 ::after {
@@ -33,27 +57,57 @@ body {
   width: 100%;
 }
 
+h3 {
+  font-size: 1.1rem;
+  letter-spacing: 0.423rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 button {
+  cursor: pointer;
+}
+
+button,
+input {
   background: none;
   border: none;
   color: inherit;
-  cursor: pointer;
   font-family: inherit;
   outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  display: none;
+}
+
+.modal-section {
+  border-top: 1px solid #e3e1e1;
+  margin: 0 24px;
+  padding: 2.4rem 0;
+}
+
+.modal-section button:focus-visible {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
 .font-sans {
   font-family: 'Kumbh Sans', sans-serif;
 }
+.font-serif {
+  font-family: 'Roboto Slab', serif;
+}
+.font-mono {
+  font-family: 'Space Mono', monospace;
+}
 
 .bg-red {
   background-color: #f87070;
 }
-
 .bg-cyan {
   background-color: #70f3f8;
 }
-
 .bg-purple {
   background-color: #d881f8;
 }
@@ -63,13 +117,11 @@ button {
 .txt-red:hover {
   color: #f87070;
 }
-
 .stroke-cyan,
 .txt-cyan:focus-visible,
 .txt-cyan:hover {
   color: #70f3f8;
 }
-
 .stroke-purple,
 .txt-purple:focus-visible,
 .txt-purple:hover {
@@ -83,5 +135,20 @@ button {
 @keyframes progress {
   100% {
     stroke-dashoffset: 0;
+  }
+}
+
+@media (min-width: 540px) {
+  h3 {
+    font-size: 1.3rem;
+    letter-spacing: 0.5rem;
+    text-align: left;
+  }
+
+  .modal-section {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 40px;
   }
 }

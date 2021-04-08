@@ -28,7 +28,7 @@ const createAnimation = () => {
 
 const settings = createSettings();
 
-const { timerType, pomodoro, longBreak, shortBreak } = settings;
+const { timerType, pomodoro, longBreak, shortBreak, font, color } = settings;
 
 const timer = derived(
   [timerType, pomodoro, longBreak, shortBreak],
@@ -44,6 +44,17 @@ const timer = derived(
   }
 );
 
+const data = derived(
+  [pomodoro, longBreak, shortBreak, font, color],
+  ([$pomodoro, $longBreak, $shortBreak, $font, $color]) => ({
+    pomodoro: $pomodoro,
+    shortBreak: $shortBreak,
+    longBreak: $longBreak,
+    font: $font,
+    color: $color,
+  })
+);
+
 export const animation = createAnimation();
 
-export { settings, timer };
+export { settings, timer, data };

@@ -5,12 +5,12 @@
 
   export let playing, min, sec;
 
-  const { color } = settings;
+  const { color, font } = settings;
   const dispatch = createEventDispatcher();
 </script>
 
 <section>
-  <div>
+  <div class={`font-${$font}`}>
     <ProgressBar />
     <span>
       {min < 10 ? `0${min}` : min}:{sec < 10 ? `0${sec}` : sec}
@@ -66,6 +66,17 @@
     position: relative;
     text-transform: uppercase;
     z-index: 1;
+  }
+
+  .font-serif span {
+    letter-spacing: normal;
+    margin-top: 0;
+  }
+
+  .font-mono span {
+    font-weight: 400;
+    letter-spacing: -10px;
+    margin: 14px 0;
   }
 
   @media (min-width: 540px) {

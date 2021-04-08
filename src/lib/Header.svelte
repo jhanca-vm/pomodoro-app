@@ -1,7 +1,7 @@
 <script>
   import { settings } from './store.js';
 
-  const { color, timerType } = settings;
+  const { color, font, timerType } = settings;
 
   let time = 'pomodoro';
 
@@ -13,7 +13,7 @@
 
 <header>
   <h1>pomodoro</h1>
-  <section>
+  <section class={`font-${$font}`}>
     <button
       class={time === 'pomodoro' ? `bg-${$color}` : null}
       disabled={time === 'pomodoro'}
